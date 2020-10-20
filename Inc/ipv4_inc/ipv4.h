@@ -7,7 +7,7 @@
 //
 
 // Header ipv4:
-//  Data data structure's
+//  Data structure's
 
 #include <iostream>
 
