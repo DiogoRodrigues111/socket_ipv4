@@ -14,13 +14,6 @@
 //  Standard C - ANSI
 //
 
-#include <winsock.h>
-#include <WinSock2.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <WS2tcpip.h>
-#include <Windows.h>
-
 #define BUFFERLEN		512
 #define DEFAULT_PORT	"27015"	// Defined for Microsoft
 								// DEFAULT PORT

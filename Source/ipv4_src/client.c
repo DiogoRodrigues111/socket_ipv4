@@ -14,6 +14,13 @@
 //  Standard C - ANSI
 //
 
+#include <winsock.h>
+#include <WinSock2.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <WS2tcpip.h>
+#include <Windows.h>
+
 #include "../../Inc/ipv4_inc/client.h"
 
 #pragma comment(lib, "Ws2_32.lib")
