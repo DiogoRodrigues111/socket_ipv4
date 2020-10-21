@@ -11,8 +11,10 @@
 // Returns:
 //	SOCKET, connect, sendRecv
 
-//  Standard C - ANSI
+//  Standard C++ - ISO
 //
+
+#include <thread>
 
 #define BUFFERLEN		512
 #define DEFAULT_PORT	"27015"	// Defined for Microsoft
@@ -20,10 +22,16 @@
 
 // Variables
 
-int _Result;
+int __result;
+struct sockaddr_in __sock_in;
+WSADATA __wsaData;
+SOCKET __socket;
 
-
+using __std_thread = std::thread;
 
 // Routines
 
-int _Receive_init_socket();
+class CClient {
+public : int __receive_init_socket();
+
+};

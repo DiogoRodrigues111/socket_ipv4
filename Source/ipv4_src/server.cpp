@@ -11,5 +11,5 @@
 // Returns:
 //	SOCKET, Setseckopt, bind, listen, accept, send/recv -> client/Server
 
-//  Standard C - ANSI
+//  Standard C++ - ISO
 //

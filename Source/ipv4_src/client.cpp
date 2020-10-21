@@ -11,13 +11,11 @@
 // Returns:
 //	SOCKET, connect, sendRecv
 
-//  Standard C - ANSI
+//  Standard C++ - ISO
 //
 
 #include <winsock.h>
 #include <WinSock2.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <WS2tcpip.h>
 #include <Windows.h>
 
@@ -27,7 +25,22 @@
 #pragma comment(lib, "Mswsock.lib")
 #pragma comment(lib, "AdvApi32.lib")
 
-int _Receive_init_socket()
+int CClient::__receive_init_socket()
 {
+	WSAStartup(MAKEWORD(2,2), &__wsaData);
+
+	__sock_in.sin_family = AF_INET;
+	__sock_in.sin_port = htons(8080);
+
+	inet_pton(AF_INET, "127.0.0.1", &__sock_in.sin_addr);
+
+	__socket = socket(AF_INET, SOCK_STREAM, 0);
+
+	bool __is_connect = false;
+
+	__std_thread __connector( [&__socket, &__sock_in, &__is_connect] () {
+		
+	});
+
 	return 0;
 }
