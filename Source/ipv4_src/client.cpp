@@ -38,7 +38,7 @@ int CClient::__receive_init_socket()
 
 	bool __is_connect = false;
 
-	__std_thread __connector( [&__socket, &__sock_in, &__is_connect] () {
+	__std_thread __connector( [ this ] () {
 		
 	});
 
